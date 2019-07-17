@@ -3,7 +3,7 @@
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. include:: ../Includes.txt
+.. include:: Includes.txt
 
 
 .. _start:
@@ -30,13 +30,13 @@ Address List for Calendar Events (Deutsch)
 		cal, tt_address
 
 	:Copyright:
-		2014
+		2014-2019
 
 	:Autor:
 		Michael Oehlhof
 
 	:E-Mail:
-		typo3@oehlhof.de
+		typo3@teamruhr.de
 
 	:Lizenz:
 		Dieses Dokument wird unter der Open Content License, siehe

@@ -37,7 +37,7 @@ Screenshots
 -----------
 
 .. figure:: ../Images/manual_html_cal_event.png
-	:alt: Show settings in the cal event
+   :alt: Show settings in the cal event
 
 **Image 1:** Show settings in the cal event.
 

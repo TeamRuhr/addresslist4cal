@@ -6,7 +6,7 @@
 .. include:: ../Includes.txt
 
 
-Wie funktioniert es	?
+Wie funktioniert es ?
 =====================
 
 Diese Erweiterung fügt die Verwendung von Adress Datensätzen (tt_address) bei Kalender Terminen (cal events) hinzu.
@@ -36,7 +36,7 @@ Screenshots
 -----------
 
 .. figure:: ../Images/manual_html_cal_event.png
-	:alt: Anzeige der Einstellungen im Kalendertermin
+   :alt: Anzeige der Einstellungen im Kalendertermin
 
 **Bild 1:** Anzeige der Einstellungen im Kalendertermin.
 

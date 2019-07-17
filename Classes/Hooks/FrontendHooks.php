@@ -22,17 +22,20 @@
 * This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 /**
- * Class 'tx_addresslist4cal_frontend_hooks' for the 'addresslist4cal' extension.
+ * Class 'FrontendHooks' for the 'addresslist4cal' extension.
  *
  * This class implements a hook for the frontend rendering in cal.
  *
  * @package TYPO3
  * @subpackage tx_addresslist4cal
  *
- * @author Michael Oehlhof <typo3@oehlhof.de>
+ * @author Michael Oehlhof <typo3@teamruhr.de>
  */
-class tx_addresslist4cal_frontend_hooks {
+class FrontendHooks {
 
 	/**
 	 * Hook for the frontend rendering in cal.
@@ -53,9 +56,9 @@ class tx_addresslist4cal_frontend_hooks {
 			return;
 		}
 		// Include language constants from tt_address TCA description.
-		$LANG = t3lib_div::makeInstance('language');
+		$LANG = GeneralUtility::makeInstance('language');
 		$LANG->init($GLOBALS['TSFE']->tmpl->setup['config.']['language']);
-		$LANG->includeLLFile(t3lib_extMgm::extPath('tt_address') . 'locallang_tca.xml');
+		$LANG->includeLLFile(ExtensionManagementUtility::extPath('tt_address') . 'locallang_tca.xml');
 		// Get the template for a single tt_address record
 		$addressTemplate = $thisCal->local_cObj->getSubpart($template, '###ADDRESSLIST4CAL_ADDRESS###');
 		$content = '';
@@ -108,8 +111,3 @@ class tx_addresslist4cal_frontend_hooks {
 		$rems['###ADDRESSLIST4CAL_ADDRESS###'] = '';
 	}
 }
-
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/addresslist4cal/hooks/class.tx_addresslist4cal_frontend_hooks.php']) {
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/addresslist4cal/hooks/class.tx_addresslist4cal_frontend_hooks.php']);
-}
-?>

@@ -30,13 +30,13 @@ Address List for Calendar Events
 		cal, tt_address
 
 	:Copyright:
-		2014
+		2014-2019
 
 	:Author:
 		Michael Oehlhof
 
 	:Email:
-		typo3@oehlhof.de
+		typo3@teamruhr.de
 
 	:License:
 		This document is published under the Open Content License

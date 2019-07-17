@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'Adds selection of tt_address records to the CAL extension.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '1.0.8',
+	'version' => '2.0.0',
 	'dependencies' => 'cal,tt_address',
 	'conflicts' => '',
 	'priority' => '',
@@ -34,10 +34,9 @@ $EM_CONF[$_EXTKEY] = array(
 	'CGLcompliance_note' => '',
 	'constraints' => array(
 		'depends' => array(
-			'php' => '5.1.0-0.0.0',
-			'typo3' => '4.5.0-6.2.999',
-			'cal' => '1.3.3-1.5.6',
-			'tt_address' => '',
+			'typo3' => '8.7.19-8.7.999',
+			'cal' => '1.11.1',
+			'tt_address' => '4.3.0-',
 		),
 		'conflicts' => array(
 		),
@@ -48,5 +47,3 @@ $EM_CONF[$_EXTKEY] = array(
 	'suggests' => array(
 	),
 );
-
-?>

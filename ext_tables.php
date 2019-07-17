@@ -8,7 +8,7 @@ $tempColumns = array(
 	'tx_addresslist4cal_addresses' => array(
 		'exclude' => 1,
 		'l10n_mode' => 'exclude',
-		'label' => 'LLL:EXT:addresslist4cal/locallang_db.xml:tx_cal_event.tx_addresslist4cal_addresses',
+		'label' => 'LLL:EXT:addresslist4cal/Resources/Private/Language/locallang_db.xml:tx_cal_event.tx_addresslist4cal_addresses',
 		'config' => Array (
 			'type' => 'select',
 			'foreign_table' => 'tt_address',
@@ -20,7 +20,5 @@ $tempColumns = array(
 	),
 );
 
-t3lib_div::loadTCA('tx_cal_event');
-t3lib_extMgm::addTCAcolumns('tx_cal_event', $tempColumns, 1);
-t3lib_extMgm::addToAllTCAtypes('tx_cal_event', '--div--;LLL:EXT:addresslist4cal/locallang_db.xml:tx_cal_event.tx_addresslist4cal_tablabel,tx_addresslist4cal_addresses;;;;1-1-1');
-?>
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_cal_event', $tempColumns);
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tx_cal_event', '--div--;LLL:EXT:addresslist4cal/Resources/Private/Language/locallang_db.xml:tx_cal_event.tx_addresslist4cal_tablabel,tx_addresslist4cal_addresses;;;;1-1-1');

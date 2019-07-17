@@ -74,9 +74,9 @@ Donate
 Donations are one way to show a developer your thankfulness!
 Many hours are being put into this extension to make it possible
 for you to build awesome sites in no time!
-Have a look at the `svn repo`_  to get a proof.
+Have a look at the `git repo`_  to get a proof.
 
-.. _svn repo: http://forge.typo3.org/projects/extension-addresslist4cal/repository
+.. _git repo: https://github.com/TeamRuhr/addresslist4cal
 
 If this extension is part of your offers, it would be awesome to pass
 a tiny little bit of it back to the original developers!

@@ -77,7 +77,7 @@ Viele Stunden wurden in diese Erweiterung investiert um es möglich zu machen
 das Sie fantastische Webseiten in kürzester Zeit erstellen können!
 Schauen Sie sich das `Repository`_  an um einen Eindruck zu bekommen.
 
-.. _Repository: http://forge.typo3.org/projects/extension-addresslist4cal/repository
+.. _Repository: https://github.com/TeamRuhr/addresslist4cal
 
 Wenn diese Erweiterung ein Teil Ihrer Angebote ist wäre es toll einen kleinen Teil
 davon zurück an den ursprünglichen Entwickler zu geben!
