@@ -1,4 +1,7 @@
 <?php
+
+namespace TeamRuhr\Addresslist4cal\Hooks;
+
 /***************************************************************
  * Copyright notice
  *
@@ -58,7 +61,7 @@ class FrontendHooks
             return;
         }
         // Include language constants from tt_address TCA description.
-        $LANG = GeneralUtility::makeInstance('language');
+        $LANG = GeneralUtility::makeInstance('TYPO3\CMS\Lang\LanguageService');
         $LANG->init($GLOBALS['TSFE']->tmpl->setup['config.']['language']);
         $LANG->includeLLFile(ExtensionManagementUtility::extPath('tt_address') . 'locallang_tca.xml');
         // Get the template for a single tt_address record

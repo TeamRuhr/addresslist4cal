@@ -7,5 +7,10 @@
     "typo3/cms-core": "^8.7.19",
     "typo3-ter/cal": "1.11.1",
     "friendsoftypo3/tt-address": "^4.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "TeamRuhr\\Addresslist4cal\\": "Classes/"
+    }
   }
 }
