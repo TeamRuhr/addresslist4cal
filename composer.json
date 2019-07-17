@@ -1,11 +1,11 @@
 {
-    "name": "teamruhr/addresslist4cal",
-    "type": "typo3-cms-extension",
-    "description": "Address List for Calendar Events",
-    "license": "GPL-2.0-or-later",
-    "require": {
-        "typo3/cms-core": "^8.7.19",
-        "typo3-ter/cal": "1.11.1",
-        "friendsoftypo3/tt-address": "^4.3.0"
-    }
+  "name": "teamruhr/addresslist4cal",
+  "type": "typo3-cms-extension",
+  "description": "Address List for Calendar Events",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "typo3/cms-core": "^8.7.19",
+    "typo3-ter/cal": "1.11.1",
+    "friendsoftypo3/tt-address": "^4.3.0"
+  }
 }
