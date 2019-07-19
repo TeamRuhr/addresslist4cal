@@ -119,7 +119,7 @@ class FrontendHooks
                     intval($markContentArray['###BIRTHDAY###']));
 
                 // Replace marker with data from marker array
-                $content .= $thisCal->local_cObj->substituteMarkerArray($addressTemplate, $markContentArray);
+                $content .= $templateService->substituteMarkerArray($addressTemplate, $markContentArray);
             }
         }
         $sims['###ADDRESSLIST4CAL###'] = $content;
