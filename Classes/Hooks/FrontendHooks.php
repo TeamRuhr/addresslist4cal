@@ -25,6 +25,8 @@ namespace TeamRuhr\Addresslist4cal\Hooks;
  * This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use TYPO3\CMS\Core\Database\ConnectionPool;
+use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
@@ -68,10 +70,16 @@ class FrontendHooks
         $addressTemplate = $thisCal->local_cObj->getSubpart($template, '###ADDRESSLIST4CAL_ADDRESS###');
         $content = '';
         // Read record(s) from tt_address
-        $where = 'uid IN (' . $thisCal->row['tx_addresslist4cal_addresses'] . ')';
-        $res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', 'tt_address', $where);
+        /** @var QueryBuilder $queryBuilder */
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_address');
+        $res = $queryBuilder->select('*')
+            ->from('tt_address')
+            ->where($queryBuilder->expr()->in('uid', $thisCal->row['tx_addresslist4cal_addresses']))
+            ->groupBy('last_name')
+            ->execute();
+
         if ($res) {
-            while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
+            while ($row = $res->fetch()) {
                 // Get overload language record
                 if ($GLOBALS['TSFE']->sys_language_content) {
                     $row = $GLOBALS['TSFE']->sys_page->getRecordOverlay('tt_address',
@@ -111,7 +119,6 @@ class FrontendHooks
                 // Replace marker with data from marker array
                 $content .= $thisCal->local_cObj->substituteMarkerArray($addressTemplate, $markContentArray);
             }
-            $GLOBALS['TYPO3_DB']->sql_free_result($res);
         }
         $sims['###ADDRESSLIST4CAL###'] = $content;
         $rems['###ADDRESSLIST4CAL_ADDRESS###'] = '';
