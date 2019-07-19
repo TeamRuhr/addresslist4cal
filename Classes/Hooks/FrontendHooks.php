@@ -27,6 +27,7 @@ namespace TeamRuhr\Addresslist4cal\Hooks;
 
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+use TYPO3\CMS\Core\Service\MarkerBasedTemplateService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
@@ -67,7 +68,8 @@ class FrontendHooks
         $LANG->init($GLOBALS['TSFE']->tmpl->setup['config.']['language']);
         $LANG->includeLLFile(ExtensionManagementUtility::extPath('tt_address') . 'locallang_tca.xml');
         // Get the template for a single tt_address record
-        $addressTemplate = $thisCal->local_cObj->getSubpart($template, '###ADDRESSLIST4CAL_ADDRESS###');
+        $templateService = GeneralUtility::makeInstance(MarkerBasedTemplateService::class);
+        $addressTemplate = $templateService->getSubpart($template, '###ADDRESSLIST4CAL_ADDRESS###');
         $content = '';
         // Read record(s) from tt_address
         /** @var QueryBuilder $queryBuilder */
