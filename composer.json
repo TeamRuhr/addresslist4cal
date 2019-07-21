@@ -3,6 +3,16 @@
   "type": "typo3-cms-extension",
   "description": "Address List for Calendar Events",
   "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Michael Oehlhof",
+      "role": "Project Owner"
+    }
+  ],
+  "homepage": "https://github.com/TeamRuhr/addresslist4cal",
+  "support": {
+    "issues": "https://github.com/TeamRuhr/addresslist4cal/issues"
+  },
   "require": {
     "typo3/cms-core": "^8.7.19 || ^9.5.0",
     "typo3-ter/cal": "2.0.0",
